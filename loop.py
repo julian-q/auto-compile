@@ -39,6 +39,8 @@ def main(args):
             if tests_passed == len(tests):
                 n_pass += 1
                 print("Pass!")
+            else:
+                print("Failed accuracy check.")
         n_total += 1
         print(f"[{args.num_examples}-shot][{args.max_retries} retries] Passed {n_pass}/{n_total}.")
 

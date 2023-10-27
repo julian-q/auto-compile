@@ -35,7 +35,7 @@ def query(prompt, system="You are a helpful assistant.", delimiter=None):
 
 def get_program():
     program_message = """Hello!
-Could you please write a C program that reads from standard input, performs a fun numerical calculation, and writes the results to standard output?"""
+Could you please write a C program that reads once from standard input, performs a fun numerical calculation, and writes the results to standard output?"""
     program = query(program_message, delimiter="```")
     gcc_asm = get_gcc_asm(program)
     while gcc_asm is None:
