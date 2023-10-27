@@ -22,8 +22,9 @@ def main(args):
         if not valid:
             print("LLM assembly is invalid.")
         else:
-            tests = get_test_cases(program)
+            get_binary(llm_asm, "./llm_code")
             get_binary(gcc_asm, "./gcc_code")
+            tests = get_test_cases(program)
             tests_passed = 0
             for test in tests:
                 print("Trying input:", test)
