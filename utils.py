@@ -38,10 +38,12 @@ def get_program():
 Could you please write a C program that reads once from standard input, performs a fun numerical calculation, and writes the results to standard output?"""
     program = query(program_message, delimiter="```")
     gcc_asm = get_gcc_asm(program)
+    retries = 0
     while gcc_asm is None:
         program = query(program_message, delimiter="```")
         gcc_asm = get_gcc_asm(program)
-    return program, gcc_asm
+        retries += 1
+    return program, gcc_asm, retries
 
 def get_test_cases(program):
     test_message = f"""Hello!
