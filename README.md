@@ -1,6 +1,7 @@
 # auto-compile
 
 **Setup**
+Set up an Anyscale Endpoints account and follow the [tutorial](https://app.endpoints.anyscale.com) for setting the `OPENAI_API_BASE` and `OPENAI_API_KEY` variables.
 ```bash
 python -m venv .venv
 source .venv/bin/activate
